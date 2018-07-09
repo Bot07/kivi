@@ -40,16 +40,5 @@ let embed = new Discord.RichEmbed()
 msg.channel.send({embed: embed})  
 } 
 });
-if (message.content === prefix + 'oraletiç'){
-        message.channel.send("Kivi mi? Oralet mi?");
-        const collector = new message.channel.createCollector(message.channel, m => m.author.id === message.author.id, { time: 10000 });
-        console.log(collector)
-        collector.on('collect', message => {
-            if (message.content === "Kivi") {
-                message.channel.send("a");
-            } else if (message.content === "Oralet") {
-                message.channel.send("b");
-            }
-        })
-});
+
 client.login(process.env.BOT_TOKEN)
