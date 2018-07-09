@@ -1,7 +1,7 @@
 const embed = require('discord.js'); 
 const Discord = require('discord.js'); 
 const client = new Discord.Client();
-const collector = new Discord.MessageCollector();
+const collector = new Discord.MessageCollector(message.channel, m => m.author.id === message.author.id, { time: 10000 });
 var prefix = 'k!' 
 client.on("ready", () => {client.user.setGame('k!yardım | Oralet <3 | Sunucu Sayısı: ' + client.guilds.size , 'https://twitch.tv/GardropFuat') 
 }); 
@@ -43,7 +43,7 @@ msg.channel.send({embed: embed})
 });
 if (message.content === prefix + 'oraletiç'){
         message.channel.send("Kivi mi? Oralet mi?");
-        message.channel, m => m.author.id === message.author.id, { time: 10000 }
+        
         console.log(collector)
         collector.on('collect', message => {
             if (message.content == "Kivi") {
