@@ -41,9 +41,17 @@ msg.channel.send({embed: embed})
 } 
 });
 
-const filter = m => m.content.startsWith('kivi');
-// Errors: ['time'] treats ending because of the time limit as an error
-channel.awaitMessages(filter, { max: 4, time: 60000, errors: ['time'] })
-message.channel.send("a")
+client.on('message', msg => {
+   if (msg.content.startsWith(prefix + "konuştur")) {
+    if (msg.channel.type !== "dm"){
+    let söz = msg.content.substring(2 + 6);
+	if (msg.content == 'Kivi')
+	   let embed = new Discord.RichEmbed()
+    .setColor(3447003)
+	.setDescription('a')
+return msg.channel.send({embed})}
+   }
+
+});
 
 client.login(process.env.BOT_TOKEN)
