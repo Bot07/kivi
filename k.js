@@ -40,21 +40,10 @@ let embed = new Discord.RichEmbed()
 msg.channel.send({embed: embed})  
 } 
 });
-if (message.content === prefix + 'oraletiç'){
 
-        message.channel.send("Kivi mi? Oralet mi?");
-  channel.awaitMessages(filter, { max:1, time: 60000, errors: ['time'] })
-            if (message.content === "Kivi") {
+const filter = m => m.content.startsWith('kivi');
+// Errors: ['time'] treats ending because of the time limit as an error
+channel.awaitMessages(filter, { max: 4, time: 60000, errors: ['time'] })
+message.channel.send("a")
 
-                message.channel.send("a");
-
-            } else if (message.content === "Oralet") {
-
-                message.channel.send("b");
-
-            }
-
-        })
-
-channel.awaitMessages
 client.login(process.env.BOT_TOKEN)
