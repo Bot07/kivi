@@ -18,3 +18,4 @@ let embed = new Discord.RichEmbed()
 msg.member.send({embed: embed}) 
 }
 });
+client.login(process.env.BOT_TOKEN)
