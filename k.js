@@ -31,4 +31,13 @@ let embed = new Discord.RichEmbed()
 msg.channel.send({embed: embed})  
 } 
 });
+client.on('message', msg => { 
+if(msg.content.toLowerCase() === 'kivi') { 
+let embed = new Discord.RichEmbed()  
+.setColor(Math.floor(Math.random() * (0xFFFFFF + 5)))  
+.addField("Ben mi? Hayır hayır! Bana seslenme!", 
+"Oralet, oralet! Evet ona söyle!") 
+msg.channel.send({embed: embed})  
+} 
+});
 client.login(process.env.BOT_TOKEN)
