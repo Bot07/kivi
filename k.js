@@ -41,15 +41,6 @@ msg.channel.send({embed: embed})
 } 
 });
 
-client.on('message', msg => {
-   if (msg.content.startsWith(prefix + "oraletiç")) {
-    if (msg.channel.type !== "dm"){
-    let söz = msg.content.substring(2 + 6);
-	if (söz == 'Kivi')
-	 msg.channel.send("a")
-   }
 
-});
-});
 
 client.login(process.env.BOT_TOKEN)
