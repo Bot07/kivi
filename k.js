@@ -1,6 +1,7 @@
 const embed = require('discord.js'); 
 const Discord = require('discord.js'); 
-const client = new Discord.Client(); 
+const client = new Discord.Client();
+const collector = new Discord.MessageCollector();
 var prefix = 'k!' 
 client.on("ready", () => {client.user.setGame('k!yardım | Oralet <3 | Sunucu Sayısı: ' + client.guilds.size , 'https://twitch.tv/GardropFuat') 
 }); 
