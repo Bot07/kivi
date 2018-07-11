@@ -41,9 +41,12 @@ msg.channel.send({embed: embed})
 } 
 });
 
-
+client.on('message', msg => { 
+if(msg.content === prefix + 'üye') { 
+  let embed = new Discord.RichEmbed()
+  .createChannel(msg.guild.memberCount, [#text channel], [], []
                           
-
+});
 
  
 
