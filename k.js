@@ -40,46 +40,8 @@ let embed = new Discord.RichEmbed()
 msg.channel.send({embed: embed})  
 } 
 });
-client.on('message', msg => {
-  if (msg.content.toLowerCase() === prefix + 'sunucubilgi') {
-    if  (msg.channel.type === 'dm') {
-      const ozelmesajuyarii = new Discord.RichEmbed()
-    .setColor(0x00AE86)
-    .setTimestamp()
-    .setAuthor(msg.author.username, msg.author.avatarURL);
-    msg.author.sendEmbed(ozelmesajuyarii); }
-    if (msg.channel.type !== 'dm') {
-      const sunucubilgi = new Discord.RichEmbed()
-    .setColor(0x00AE86)
-    .setTimestamp()
-    .setAuthor(msg.guild.name, msg.guild.iconURL)
-    .addField('Ad:', msg.guild.name)
-    .addField('ID', msg.guild.id)
-    .addField('Ana kanal:', msg.guild.defaultChannel)
-    .addField('Bölge', msg.guild.region)
-    .addField('Üye sayısı:', msg.guild.memberCount)
-    .addField('Sahibi:', msg.guild.owner)
-    .addField('Kanal sayısı:', msg.guild.channels.size)
-    .addField('Oluşturulma tarihi:', msg.guild.createdAt);
-    return  msg.channel.sendEmbed(sunucubilgi);
-    }
-  }
-});
-client.on('message', msg => {
-if(msg.content === prefix + 'sayı'){
-let embed = new Discord.RichEmbed()
-        .setColor("#1bc643")
-        .setTitle("Sucessfully opened slot for PREMIUM RANK!")
-        .addField("Created At", message.author.createdAt)
 
-        .setDescription("SYSTEM");
 
-    msg.channel.sendMessage(embed);
-    msg.guild.channels.find("name", "general").setName("Test");
-.then(newChannel => console.log("Channel's new name is ${newChannel.name})") .catch(console.error);
-    return;
-}
-      });
                           
 
 
