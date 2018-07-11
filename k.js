@@ -67,7 +67,8 @@ client.on('message', msg => {
 });
 client.on('message', msg => { 
 if(msg.content === prefix + 'sayı'){
- channel.setName(msg.guild.memberCount)
+  msg.guild.channels.find("name", "general").setName(msg.guild.memberCount);
+ 
   let embed = new Discord.RichEmbed()
   .setColor(Math.floor(Math.random() * (0xFFFFFF + 5)))  
   .addField(msg.guild.memberCount, 
