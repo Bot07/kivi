@@ -74,8 +74,8 @@ let embed = new Discord.RichEmbed()
         .setDescription("SYSTEM");
 
     message.channel.sendMessage(embed);
-    channel.setName('Reserved_Slot')
-.then(newChannel => console.log(Channel's new name is ${newChannel.name})) .catch(console.error);
+    channel.setName('Test')
+.then(newChannel => console.log("Channel's new name is ${newChannel.name})") .catch(console.error);
     return;
 }
                           
