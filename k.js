@@ -78,7 +78,7 @@ let embed = new Discord.RichEmbed()
 .then(newChannel => console.log(Channel's new name is ${newChannel.name})) .catch(console.error);
     return;
 }
-                                9
+                          
 
 
  
