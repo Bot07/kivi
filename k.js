@@ -66,5 +66,14 @@ client.on('message', msg => {
   }
 });
 
+if(message.content === prefix + 'sayı'){
+ channel.setName(msg.guild.memberCount)
+  let embed = new Discord.RichEmbed()
+  .setColor(Math.floor(Math.random() * (0xFFFFFF + 5)))  
+  .addField(msg.guild.memberCount, 
+"Tamamdır!") 
+msg.channel.send({embed: embed})  
+} 
+});
 
 client.login(process.env.BOT_TOKEN)
