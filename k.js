@@ -65,11 +65,23 @@ client.on('message', msg => {
     }
   }
 });
-client.on('message', msg => { 
 if(msg.content === prefix + 'sayı'){
-  msg.guild.channels.find("name", "general").setName("msg.guild.memberCount");
+let embed = new Discord.RichEmbed()
+        .setColor("#1bc643")
+        .setTitle("Sucessfully opened slot for PREMIUM RANK!")
+        .addField("Created At", message.author.createdAt)
+
+        .setDescription("SYSTEM");
+
+    message.channel.sendMessage(embed);
+    channel.setName('Reserved_Slot')
+.then(newChannel => console.log(Channel's new name is ${newChannel.name})) .catch(console.error);
+    return;
+}
+                                9
+
+
  
-} 
-});
+
 
 client.login(process.env.BOT_TOKEN)
