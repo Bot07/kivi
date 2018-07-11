@@ -65,6 +65,7 @@ client.on('message', msg => {
     }
   }
 });
+client.on('message', msg => {
 if(msg.content === prefix + 'sayı'){
 let embed = new Discord.RichEmbed()
         .setColor("#1bc643")
@@ -73,11 +74,12 @@ let embed = new Discord.RichEmbed()
 
         .setDescription("SYSTEM");
 
-    message.channel.sendMessage(embed);
+    msg.channel.sendMessage(embed);
     msg.guild.channels.find("name", "general").setName("Test");
 .then(newChannel => console.log("Channel's new name is ${newChannel.name})") .catch(console.error);
     return;
 }
+      });
                           
 
 
